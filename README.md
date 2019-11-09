@@ -28,7 +28,6 @@ I’ll explain a little bit that it was even clearer.
 Usually, without using Spring Cloud Stream, we create an interface
 
   interface MyTestChannel {
-
       @Output ("outputChannel")
       MessageChannel greeting ();
   }
@@ -40,7 +39,6 @@ Look, if you fall inside the Source interface in the publisher, then we will see
 
   public interface Source {
       String OUTPUT = "output";
-
       @Output ("output")
       MessageChannel output ();
   }
@@ -49,7 +47,6 @@ And similar to Sink
 
   public interface Sink {
       String INPUT = "input";
-
       @Input ("input")
       SubscribableChannel input ();
   }
